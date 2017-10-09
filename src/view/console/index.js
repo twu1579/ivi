@@ -7,7 +7,8 @@ const textAreaStyle = {
 	backgroundColor:'black',
 	color: 'white',
 	fontFamily: 'Courier',
-	overflow: 'scroll'
+  overflow: 'scroll',
+  padding: '13px'
 }
 
 const Console = ({ consoleOutput, }) => (
