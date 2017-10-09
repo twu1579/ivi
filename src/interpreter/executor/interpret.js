@@ -300,7 +300,7 @@ function findBufferState(buffer) {
 }
 
 // Global evaluate function called on the step and run click
-function evaluate(inputCode) {
+export function evaluate(inputCode) {
    
     //Cleanup our structures before processing
     cleanStructures();
@@ -348,6 +348,9 @@ const code = `function helloWorld() {
                 var h = 2;
             }`;
 
+const code2 = `function hey() {
+                var a=2;
+               }`
 /* Expected output:
 
     [  { lineNumber : 0,
@@ -373,9 +376,10 @@ const code = `function helloWorld() {
 */
 
 
-const ret = evaluate(code);
+const ret = evaluate(code2);
 if (!ret) {
     console.log("Syntax error");
 } else {
-    masterRepToString(ret);
+//    masterRepToString(ret);
+//  console.log(ret)
 }
