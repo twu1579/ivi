@@ -1,18 +1,31 @@
 import {evaluate} from '../src/interpreter/executor/interpret'
-import * as vars from './helpers/input/variables'
-import * as ret from './helpers/output/variables'
+import * as code from './helpers/input/variables'
+import * as result from './helpers/output/variables'
 
+let ret
 
-describe('evaluate() - variables only', () =>{
-  describe('one var', () => {
-    const var_a_data = ret.one_var(0, '"a"','""','""')
-    test('basic declare', ()=> {
-      const res = evaluate(vars.dec_a)
-      expect(res).toContainEqual(var_a_data)
+describe('evaluate()', () => {
+  describe('one var', ()=> {
+    it('no assign', () => { 
+      ret = evaluate(code.dec_a)
+      expect(ret).toEqual(result.one_v)  
     })
-    test('declare with sem', () => {
-      const res = evaluate(vars.a_sem)
-      expect(res).toContainEqual(var_a_data)
+    it('no `var`', () =>{
+      ret = evaluate(code.no_var)
+      expect(ret).toEqual(result.one_v)
     })
+    it('with sem', () => {
+      ret = evaluate(code.a_sem)
+      expect(ret).toEqual(result.
+    })
+    it('assign num', () => {
+      ret = evaluate(code.assign_num)
+      expect(ret).toEqual(result.declare_and_assign)
+    })
+    it('assign str', () => {
+      ret = evaluate(code.assign_str)
+      expect(ret).toEqual(result.assign_str)
+    })
+    it(''
   })
 })

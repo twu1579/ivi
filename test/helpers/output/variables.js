@@ -1,51 +1,41 @@
-/* Output format
-
-[ LineRep { lineNumber: 0, dataArray: [], consoleOutput: '' },
-  LineRep { lineNumber: 15, dataArray: [ [Object] ], consoleOutput: '' } ]
-
-  Object:
-
-{ lineNumber : 2, 
-      dataArray : [ {
-                        name : a,
-                        value : 2
-      } ]
-      consoleOutput: ""
-    }
-*/
-
 
 // good returns
-export function one_var(line, name, val, cons){ 
-  let ret = '{ "lineNumber":'+ line + 
-    ',"dataArray": ['+
-    '{ "name" : '+ name + 
-    ',"value" : '+ val + 
-    ' } ],"consoleOutput": '+ cons +' }'
-  
-  return JSON.parse(ret)
-}
+export const var_declare = 
+  [{ "lineNumber": 0,
+    "dataArray": [ 
+    { "name" : "a",
+      "value" : ""
+     } ],
+    "consoleOutput": "",
+    "unsupported":false
+  }]
 
-export function no_var(line, cons){ 
-  let ret = '{ "lineNumber":'
-    + line + 
-  ',"dataArray": [],"consoleOutput": "'
-    + cons + 
-    '" }'
-  
-  return JSON.parse(ret)
-}
+export const declare_and_assign = 
+  [{ "lineNumber": 0,
+    "dataArray": [ 
+    { "name" : "a",
+      "value" : "2"
+     } ],
+    "consoleOutput": "",
+    "unsupported":false
+  }]
 
+export const one_v = 
+  [{ "lineNumber": 0,
+    "dataArray": [ 
+    { "name" : "a",
+      "value" : ""
+     } ],
+    "consoleOutput": "",
+    "unsupported":false
+  }]
 
-export function two_var(line, name, val, cons){ 
-  
-  let ret = '{ "lineNumber":'+ line + 
-    ',"dataArray": ['+
-    '{ "name" : "'+ name[0] + 
-    '","value" : "'+ val[0] +'"}'+ 
-    '{ "name" : "'+ name[1] + 
-    '","value" : "'+ val[1] + 
-    '],"consoleOutput": "'+ cons +'" }'
-  
-  return JSON.parse(ret)
-}
+export const assign_str = 
+  [{ "lineNumber": 0,
+    "dataArray": [ 
+    { "name" : "a",
+      "value" : "hello"
+     }],
+    "consoleOutput": "",
+    "unsupported":false
+  }]

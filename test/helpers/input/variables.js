@@ -1,13 +1,11 @@
 // good ones
 export const dec_a = `var a`
 
-export const dec_b = `var b`
+export const no_var = `a`
 
 export const a_sem = `var a;`
 
-export const b_sem = `var b;`
-
-export const assign_num = `a = 2`
+export const assign_num = `var a = 2`
 
 export const assign_big_num = `a = 20000`
 
