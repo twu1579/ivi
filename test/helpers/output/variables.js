@@ -1,41 +1,70 @@
-
 // good returns
 export const var_declare = 
-  [{ "lineNumber": 0,
+  [{"lineNumber": 1,
     "dataArray": [ 
-    { "name" : "a",
-      "value" : ""
-     } ],
-    "consoleOutput": "",
-    "unsupported":false
+     {"name" : "a",
+      "value" : "undefined"} 
+    ],
+   "consoleOutput":"",
+	 "consoleVariable":false,
+	 "variableValue":false,
+	 "unsupported":false 
   }]
 
-export const declare_and_assign = 
-  [{ "lineNumber": 0,
-    "dataArray": [ 
-    { "name" : "a",
-      "value" : "2"
-     } ],
-    "consoleOutput": "",
-    "unsupported":false
+export const assign_num = 
+  [{"lineNumber": 1,
+    "dataArray": [
+      {"name" : "a",
+       "value" : "2"}
+    ],
+   "consoleOutput":"",
+	 "consoleVariable":false,
+	 "variableValue":false,
+	 "unsupported":false 
   }]
 
-export const one_v = 
-  [{ "lineNumber": 0,
-    "dataArray": [ 
-    { "name" : "a",
-      "value" : ""
-     } ],
-    "consoleOutput": "",
-    "unsupported":false
+export const dec_then_assign = 
+  [{"lineNumber": 1,
+    "dataArray": [
+      {"name" : "a",
+       "value" : "undefined"}
+    ],
+   "consoleOutput":"",
+	 "consoleVariable":false,
+	 "variableValue":false,
+	 "unsupported":false 
+  },
+   {"lineNumber": 2,
+    "dataArray": [
+      {"name" : "a",
+       "value" : "2"}
+    ],
+   "consoleOutput":"",
+	 "consoleVariable":false,
+	 "variableValue":false,
+	 "unsupported":false 
   }]
 
 export const assign_str = 
-  [{ "lineNumber": 0,
-    "dataArray": [ 
-    { "name" : "a",
-      "value" : "hello"
-     }],
+  {"lineNumber": 2,
+    "dataArray": [
+      {"name" : "a",
+       "value" : "'hello'"}
+    ],
     "consoleOutput": "",
+	  "consoleVariable":false,
+	  "variableValue":false,
     "unsupported":false
-  }]
+  }
+
+export const assign_b_to_a = 
+  {"lineNumber": 3,
+    "dataArray": [
+      {"name" : "a",
+       "value" : "b"} 
+    ],
+    "consoleOutput": "",
+	  "consoleVariable":false,
+	  "variableValue":true,
+    "unsupported":false
+  }

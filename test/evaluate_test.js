@@ -5,27 +5,26 @@ import * as result from './helpers/output/variables'
 let ret
 
 describe('evaluate()', () => {
-  describe('one var', ()=> {
-    it('no assign', () => { 
-      ret = evaluate(code.dec_a)
-      expect(ret).toEqual(result.one_v)  
+  describe('good calls', ()=> {
+    it('declare variable', () => { 
+      ret = evaluate(code.var_declare)
+      expect(ret).toEqual(result.var_declare)  
     })
-    it('no `var`', () =>{
-      ret = evaluate(code.no_var)
-      expect(ret).toEqual(result.one_v)
-    })
-    it('with sem', () => {
-      ret = evaluate(code.a_sem)
-      expect(ret).toEqual(result.
-    })
-    it('assign num', () => {
+    it('declare and assign', () =>{
       ret = evaluate(code.assign_num)
-      expect(ret).toEqual(result.declare_and_assign)
+      expect(ret).toEqual(result.assign_num)
     })
-    it('assign str', () => {
+    it('declare THEN assign', () => {
+      ret = evaluate(code.dec_then_assign)
+      expect(ret).toEqual(result.dec_then_assign)
+    })
+    it('assign string', () => {
       ret = evaluate(code.assign_str)
-      expect(ret).toEqual(result.assign_str)
+      expect(ret).toContainEqual(result.assign_str)
     })
-    it(''
+    it('reassign to other var value', () => {
+      ret = evaluate(code.assign_b_to_a)
+      expect(ret).toContainEqual(result.assign_b_to_a)
+    })
   })
 })
