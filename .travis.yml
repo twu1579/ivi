@@ -18,6 +18,6 @@ install:
   - gulp build
   - cd ..
 
-before_script: npm run build
-
-script: jest
+script: 
+  - jest
+  - npm run build
