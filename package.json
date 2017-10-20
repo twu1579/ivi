@@ -75,7 +75,6 @@
   "homepage": "https://github.com/project-ivi/ivi#readme",
   "jest": {
     "collectCoverage": true,
-    "coverageFormats": ["json","html"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],

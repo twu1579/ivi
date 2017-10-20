@@ -4,7 +4,7 @@ When contributing to this repository, please first discuss the change you wish t
 
 ## Pull Request Process
 
-1. Ensure any build passes, all tests pass and (if applicable) new tests have been written.
+1. Ensure any build passes, all tests pass and (if applicable) new tests have been written. See [this](https://github.com/project-ivi/ivi/wiki/Testing) for more info on testing.
 2. Update the README with any new supported & unsupported cases, or new features.
 3. You may merge the Pull Request in once you have the sign-off of *two* other developers, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
