@@ -11,6 +11,6 @@ cache:
 
 install:  npm install
 
-script: 
-  - jest
-  - npm run build
+before_script: jest
+
+script: npm run build

@@ -25,6 +25,10 @@ IVI is now built.
 
 `npm start` will run the dev server and open your browser. 
 
+### Testing
+
+Run tests with the `jest` command. This is a single run, for continuous evaluation use `npm run test`.
+
 ## Features
 ### Supported  
 Currently IVI only handles variable processing and is relatively basic.
