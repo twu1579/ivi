@@ -1,11 +1,6 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 if [ ${TRAVIS_BRANCH} = "master" ]; then 
-=======
-if [ ${TRAVIS_BRANCH} = "deploy_test" ]; then 
-  echo "deploy test"
->>>>>>> 91f2f8e37de336e3673cf4e4a938763d7cbbeb1e
   MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
 	git clone git://${GH_REPO}
   mkdir ${REPO}/ivi
