@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ ${TRAVIS_BRANCH} = "deploy_test" ]; then 
-	MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+if [ ${TRAVIS_BRANCH} = "master" ]; then 
+  MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
 	git clone git://${GH_REPO}
   mkdir ${REPO}/ivi
 	cp -R ${FILES} ${REPO}/ivi
